@@ -9,4 +9,12 @@ Broad topic, Flickr data might not give enough information to prove/reject some 
 ## Deliverables
 Visual representation should allow an easy comparison between different cities, social and cultural differences in a city over the years
 ## Timeplan
+* Checkpoint (Mid December)
+    * Collect data
+    * Study dataset
+    * Define hypothesis (possible trends)
+* Mini-Symposium (End of January) 
+    * Analyse metadata relevant to trends
+    * Prove/reject hypothesis
+    * Vusulization of conclusions
 
