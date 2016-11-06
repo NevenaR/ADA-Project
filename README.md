@@ -7,6 +7,6 @@ The analysis will be performed on Flickr data that could be either found online 
 The main challenge will be a Machine Learning task, which is to cluster the image metadata into different trends. The trends should be defined based on our hypothesis. For example, if consumption of different food types is analysed, the hypothesis can be that fast food is being increasingly popular in Switzerland in the past few years, especially in large cities. Several factors can be then analysed: metadata containing concrete fast food products (eg. #pizza), metadata containing names of the largest fast food restaurants (eg. #McDonald's). Once the best candidates to prove/reject the hypothesis are identified (cities to which the most aforementoned metadata is related), we could try to identify the trend that preceded. 
 Broad topic, Flickr data might not give enough information to prove/reject some hypothesis. 
 ## Deliverables
-The project should allow people to see 
+Visual representation should allow an easy comparison between different cities, social and cultural differences in a city over the years
 ## Timeplan
 
