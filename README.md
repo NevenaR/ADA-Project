@@ -11,7 +11,10 @@ There were multiple issues we encountaired during the work with tags, namely mul
 The idea is to filter those tags in order to obtain meaningful ones for a certain city that would describe the popularity of different things in that city. 
 ## Deliverables
 Visual representation should allow an easy comparison between different cities, social and cultural differences in a city over the years. This would be our main deliverable. The results of the analysis and data would be given and documented as well.
-## Timeplan
+
+
+
+## Previous Timeplan
 * Checkpoint (Mid December)
     * Collect data
     * Study dataset
