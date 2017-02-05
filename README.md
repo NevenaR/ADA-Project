@@ -6,12 +6,11 @@ As mentioned above, the analysis will be performed on Flickr data. Since we didn
 Only data geolocated from Switzerland was used. The overall result of data scraping produced about 2.8 million images mostly from years 2005 till 2017. The resulting data was stored in parts on github and it can be found together with all the transformations done on it in the data folder. 
 The analysis was concenrated on the metadata of Flickr images, specifically we used tags. 
 There were multiple issues we encountaired during the work with tags, namely multiple languages and special characters, spelling mistakes and all this made the analysis of the tags more complicated. We have focused on two different axes: 
-* One was to analyse tags per canton and observe the differences 
+* One was to analyse tags per canton and observe the differences. The idea is to filter those tags in order to obtain meaningful ones for a certain canton that would describe the popularity of different things in that it. 
 * Second was the analysis per time, where we found the most popular locations for each year based on number of images and number of users. 
-The idea is to filter those tags in order to obtain meaningful ones for a certain city that would describe the popularity of different things in that city. 
-## Deliverables
-Visual representation should allow an easy comparison between different cities, social and cultural differences in a city over the years. This would be our main deliverable. The results of the analysis and data would be given and documented as well.
 
+## Results
+The results from the analysis can be seen on different graphs. Overall, we observed that there were not much change in the Flickr data over years in Switzerland (at least with the years we had data for) and the most popular events stayed still popular. However, when analyzing data per canton, certain difference can be observed, together with particularities of different cantons. We could clearly observe the diversity of Switzerland. The graph with the word clouds per canton can clearlt show this foundings. 
 
 
 ## Previous Timeplan
