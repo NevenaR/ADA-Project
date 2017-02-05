@@ -1,7 +1,7 @@
 # ADA Project
 ## Abstract
 Geolocated social media data gives a new perspective and insight on the life of a city or even a country. This data can indicate how a city developped/changed over years. With proper analysis, certain trends of the city can be identified and used to draw conclusions about the city in the near future. This project will be centered on Switzerland and we will study different regions in Switzerland. The goal is to find differences between data across Switzerland and also to create a temporal profile of the social and cultural trends of some locations over the years using georeferenced social media data, Flickr data in this case. 
-## Data Description
+## Data Description and analysis idea
 As mentioned above, the analysis will be performed on Flickr data. Since we didn't have ready data available, we needed to scrape the data. The Flickr API was used for that purposes and more details about the script and scraping can be found in the scraping folder. 
 Only data geolocated from Switzerland was used. The overall result of data scraping produced about 2.8 million images mostly from years 2005 till 2017. The resulting data was stored in parts on github and it can be found together with all the transformations done on it in the data folder. 
 The analysis was concenrated on the metadata of Flickr images, specifically we used tags. 
