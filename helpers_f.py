@@ -1,3 +1,6 @@
+import pandas as pd
+import datetime
+
 #return maximal number of posts for each year 
 def findmax(df_in):
     df=df_in.reset_index()
@@ -25,7 +28,7 @@ def getPlaceNames(popular_places):
     return names
     
 #retun number of distinct users who at given location in given year
-def getNumUsers(x,y,z):
+def getNumUsers(rounded_geo,x,y,z):
     return rounded_geo[(rounded_geo.lat==x) & (rounded_geo.lon==y) & (rounded_geo.year==z)].groupby("userid").count().shape[0]
     
 #return number of occurences of each word in a text
