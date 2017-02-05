@@ -1,5 +1,6 @@
 import pandas as pd
 import datetime
+import re
 
 #return maximal number of posts for each year 
 def findmax(df_in):
@@ -87,3 +88,53 @@ def daytime(x):
         return "evening"
     else:
         return "night"
+
+def fill_nan(tag, title):
+    '''we check first if the tag is null, to which case we fill it with its non-nan corrresponding title'''
+    if((str(tag) == 'none') or (str(tag) == 'nan')):
+        if((str(title) != 'none') and ( str(title) != 'nan')):
+            return title
+    else:
+        #We append the title to the tags in order to, optimistically get more relevant informations
+        if((str(title) != 'none') and ( str(title) != 'nan')):
+            return tag + ' ' + title
+        return tag
+    
+def preprocessor(tags):
+    
+    if('=' in tags):
+        m = re.search('(?<==).*', tags)
+        tags = m.group(0)
+    tags = re.sub('[^?a-zA-Z \n]', ' ', tags.lower())
+    tags = re.sub(r'(  +|\n)', " ", tags) 
+    tags = re.sub(r'(\?+)', "", tags) 
+    remove_words =['switzerland', 'schweiz', 'suisse', 'svizzera', 'svizra', 'suiza', 'europe' 'geo', 'lon', 'lat', 
+                   'img', 'ch', 're', 'jpg', 'dsc', 'che', 've', 'in', 'the', 'zrh','fr', 'the', 'for', 'mm', 'geolon', 
+                   'geolat']
+    tags = ' '.join([word for word in tags.split(' ') if ((not len(word) == 1) & (not word in remove_words))])
+    tags = re.sub(r'(^(  ?)|(  ?)$)', '', tags)
+    if (len(tags) == 0): return np.nan
+    return tags
+
+def getAbbr(x):
+    if abbr.get(x) is not None:
+        return abbr.get(x)
+    else:
+        return 'other' #the ones not in Switzerland
+    
+def mapCanton(row):
+    lat = row[0]
+    lon = row[1]
+    coordinate_long = str(lat)+", "+str(lon)
+    x = cantonDict.get(coordinate_long)
+    if x is not None:
+        return getAbbr(x)
+    else:
+        lat = round(float(row[0]),3)
+        lon = round(float(row[1]),3)
+        coordinate_short = str(lat)+", "+str(lon)
+        y = cantonDict.get(coordinate_short)
+        if y is not None:
+            return getAbbr(y)
+        else:
+            return y #we need y in order to see None
