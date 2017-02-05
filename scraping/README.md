@@ -1,0 +1,1 @@
+In this folder the scraping script can be found together with the notebook in which it was used. The data that is produced can be found in the data folder of the repository. The script uses the Flickr API https://www.flickr.com/services/api/
